@@ -70,12 +70,13 @@ const PlanetsTable = () => {
             {!loading ? (
               <>
                 {planets.map((planet, i) => {
+                  const planetIndex = i;
                   return (
                     <TableRow
                       key={i}
                       sx={{ "&:hover": { backgroundColor: "#f5f5f5" } }}
                     >
-                      {tableRowKeys.map((tableRowKey) => {
+                      {tableRowKeys.map((tableRowKey, i) => {
                         return (
                           <TableCell
                             key={tableRowKey}
@@ -87,6 +88,15 @@ const PlanetsTable = () => {
                                   }
                                 : null
                             }
+                            onClick={() => {
+                              if (tableRowKey === "name") {
+                                navigate(
+                                  `/details/${
+                                    (page - 1) * 10 + planetIndex + 1
+                                  }`
+                                );
+                              }
+                            }}
                           >
                             {planet[tableRowKey]}
                           </TableCell>
