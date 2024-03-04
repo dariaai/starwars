@@ -54,12 +54,15 @@ const PlanetsTable = () => {
   return (
     <Container maxWidth="md" sx={{ marginTop: 5 }}>
       <TableContainer component={Paper}>
-        <Table>
+        <Table sx={{ minHeight: "800px" }}>
           <TableHead>
             <TableRow>
               {tableHeaders.map((tableHeader) => {
                 return (
-                  <TableCell key={tableHeader} sx={{ fontWeight: "bold" }}>
+                  <TableCell
+                    key={tableHeader}
+                    sx={{ fontWeight: "bold", width: "120px" }}
+                  >
                     {tableHeader}
                   </TableCell>
                 );
@@ -111,11 +114,16 @@ const PlanetsTable = () => {
                 {tableRowKeys.map((tableRowKey, i) => {
                   return (
                     <TableCell key={i}>
-                      <Skeleton width="100%" height={100} animation="wave" />
-                      <Skeleton width="100%" height={100} animation="wave" />
-                      <Skeleton width="100%" height={100} animation="wave" />
-                      <Skeleton width="100%" height={100} animation="wave" />
-                      <Skeleton width="100%" height={100} animation="wave" />
+                      <Skeleton width="100%" height={68} animation="wave" />
+                      <Skeleton width="100%" height={67} animation="wave" />
+                      <Skeleton width="100%" height={67} animation="wave" />
+                      <Skeleton width="100%" height={67} animation="wave" />
+                      <Skeleton width="100%" height={67} animation="wave" />
+                      <Skeleton width="100%" height={67} animation="wave" />
+                      <Skeleton width="100%" height={67} animation="wave" />
+                      <Skeleton width="100%" height={67} animation="wave" />
+                      <Skeleton width="100%" height={67} animation="wave" />
+                      <Skeleton width="100%" height={67} animation="wave" />
                     </TableCell>
                   );
                 })}
