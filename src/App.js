@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import PlanetsTable from "./PlanetsTable";
-import PlanetDetails from "./PlanetDetails";
+import PlanetsTable from "./Components/PlanetsTable";
+import PlanetDetails from "./Components/PlanetDetails";
 
 const App = () => {
   return (
